@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js" defer></script>
+    <title>Data Binding</title>
+</head>
+<body>
+    <div id="app">
+        <form action="" id="app-form">
+            <input type="text" v-model="input_name" placeholder="digite seu nome"> <!-- conecta o valor de um campo de formulário a uma variável no JavaScript, atualizando automaticamente a variável quando o usuário digita algo e o campo quando a variável muda. -->
+            <input type="submit" value="Enviar" v-on:click="submitForm"> <!-- O v-on:click no Vue.js conecta o clique no botão a uma função chamada submitForm, que será executada quando o botão for clicado. -->
+
+            <p>O meu nome é: {{ name }}</p>
+            <p>Data binding: {{input_name}}</p>
+        </form>
+    </div>
+</body>
+</html>
