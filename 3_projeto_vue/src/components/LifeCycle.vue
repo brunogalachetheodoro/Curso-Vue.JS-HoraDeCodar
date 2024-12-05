@@ -1,10 +1,14 @@
 <template>
-    <h1>Meu nome é: {{nome}}</h1>
+    <div>
+        <h1>Meu nome é: {{nome}}</h1>
+    </div>
+    
 </template>
 
 <script>
 export default {
     name: 'LifeCycle',
+    teste:'testando',
     data() {
         return {
         nome: 'Ainda não sei'
@@ -19,6 +23,6 @@ export default {
        setTimeout(()=>{
             this.nome = 'João'
         },4000)
-    }
+    },
 }
 </script>

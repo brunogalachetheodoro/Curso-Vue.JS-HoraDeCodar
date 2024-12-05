@@ -9,6 +9,9 @@
             <li>CSS</li>
             <li>Vue.JS</li>
         </ul>
+        <div>
+            <button @click="showEmail">{{ textoBotao }}</button>
+        </div>
         <p v-show='mostrar_email'>Mande uma mensagem para: <strong>{{email}}</strong></p>
         <p>Para acessar meu portfólio <a v-bind:href="meu_link" target="_blank">basta clicar aqui</a></p>
         <Picture/>
@@ -24,9 +27,20 @@ import Picture from './Picture.vue'
         data(){
             return{
                 esta_trabalhando: false,
-                mostrar_email:true ,
+                mostrar_email: false ,
                 email:'bruno@email.com',
-                meu_link: '//www.globoesporte.com/saopaulo'
+                meu_link: '//www.globoesporte.com/saopaulo',
+                textoBotao: 'Mostrar e-mail'
+            }
+        },
+        methods: {
+            showEmail(){
+                this.mostrar_email = !this.mostrar_email
+                if(!this.mostrar_email) {
+                    this.textoBotao = 'Mostrar e-mail'
+                } else {
+                    this.textoBotao = 'Ocultar e-mail'
+                }
             }
         }
     }
