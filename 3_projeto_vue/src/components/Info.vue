@@ -1,5 +1,6 @@
 <template>
     <div>
+        <p>{{compEmail}}</p>
         <h2>Esta é a descrição da pessoa: {{nome}}</h2>
         <p v-if='esta_trabalhando'>Estou trabalhando no momento.</p>
         <p v-else>Estou em busca de novas oportunidades</p>
@@ -26,11 +27,13 @@ import Picture from './Picture.vue'
         components:{
             Picture
         },
+        props: {
+            email: String
+        },
         data(){
             return{
                 esta_trabalhando: false,
                 mostrar_email: false ,
-                email:'bruno@email.com',
                 meu_link: '//www.globoesporte.com/saopaulo',
                 textoBotao: 'Mostrar e-mail',
                 backend_tec:['JavaScript','PHP','Phyton'],
