@@ -130,6 +130,16 @@
       "carne": null,
       "opcionais": [],
       "status": "Solicitado"
+    },
+    {
+      "id": "d3fe",
+      "nome": null,
+      "carne": null,
+      "opcionais": [
+        "Bacon",
+        "Salame"
+      ],
+      "status": "Solicitado"
     }
   ]
 }
